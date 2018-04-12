@@ -6,7 +6,31 @@
     android:layout_height="match_parent"
     tools:context="com.example.android.quizitgood.MainActivity"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="20dp"
+    android:background="#000"
+    >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fitness_exercise_dumbell_workout_icon"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="48sp"
+        android:text="Brain Gym"
+        android:textColor="#e69e04"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:text="Are you Ready for it?"
+        android:textColor="#d21145"
+        android:textAlignment="center"/>
+
         <EditText
             android:id="@+id/name_input"
             android:layout_width="match_parent"
@@ -21,25 +45,42 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+            <View
+                android:layout_height="1dp"
+                android:layout_width="match_parent"
+                android:background="#e7cc00"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Q1"
-                android:textSize="18dp"/>
+                style="@style/CustomText"
+                />
 
             <EditText
                 android:id="@+id/questionOne_input"
-                android:layout_width="200dp"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:hint="Answer"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                style="@style/CustomText"/>
+
+            <View
+                android:layout_height="1dp"
+                android:layout_width="match_parent"
+                android:background="#e7cc00"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/Q2"
             android:layout_margin="4dp"
-            android:textSize="18dp"
             android:id="@+id/questiontwo"
+            style="@style/CustomText"
             />
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -59,63 +100,90 @@
             android:backgroundTint="@color/colorAccent"
             />
             </RelativeLayout>
-
+            <View
+                android:layout_height="1dp"
+                android:layout_width="match_parent"
+                android:background="#e7cc00"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/Q3"
-        android:textSize="18dp"/>
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <RadioButton
+        style="@style/CustomText"/>
+
+
+        <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/mytrue"
-            android:id="@+id/q3true_radio"
-            android:textAllCaps="true"
-            />
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/myfalse"
-            android:id="@+id/q3false_radio"
-            android:textAllCaps="true"
-            />
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/myneither"
-            android:id="@+id/q3neither_radio"
-            android:textAllCaps="true"/>
-    </RadioGroup>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/Q4"
-                android:textSize="18dp"/>
-            <RadioGroup
+            style="@style/myRadioStyle">
+            <RadioButton
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/q4true_radio"
-                    android:text="@string/mytrue"
-                    android:textAllCaps="true"
-                    />
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/myfalse"
-                    android:id="@+id/q1false_radio"
-                    android:textAllCaps="true"/>
-            </RadioGroup>
+                android:layout_height="wrap_content"
+                android:text="@string/mytrue"
+                android:id="@+id/q3true_radio"
+                android:textAllCaps="true"
+                />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/myfalse"
+                android:id="@+id/q3false_radio"
+                android:textAllCaps="true"
+                />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/myneither"
+                android:id="@+id/q3neither_radio"
+                android:textAllCaps="true"/>
+        </RadioGroup>
+
+    <View
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="#e7cc00"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        />
+            <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Q4"
+                style="@style/CustomText"/>
+
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/q4true_radio"
+                android:text="@string/mytrue"
+                android:textAllCaps="true"
+                />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/myfalse"
+                android:id="@+id/q1false_radio"
+                android:textAllCaps="true"/>
+        </RadioGroup>
+    <View
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="#e7cc00"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/Q5"
-        android:textSize="18dp"/>
+        style="@style/CustomText"/>
+
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
@@ -124,7 +192,8 @@
             android:layout_height="wrap_content"
             android:text="@string/mytrue"
             android:id="@+id/q5true_radio"
-            android:textAllCaps="true"/>
+            android:textAllCaps="true"
+            />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
